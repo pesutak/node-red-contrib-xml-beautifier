@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('xml-beautify',{
+        category: 'function',
+        color: '#ffaaaa',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "fa-file-code-o",
+        label: function() {
+            return this.name||"xml-beautify";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="xml-beautify">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="xml-beautify">
+    <p>A simple node that converts the message payloads into beauty xml</p>
+</script>

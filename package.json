@@ -1,0 +1,42 @@
+{
+  "name": "node-red-contrib-xml-beautifier",
+  "version": "1.0.0",
+  "description": "beautify xml output",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"test/**/*spec.js\"",
+    "coverage": "istanbul cover _mocha $(find ./lib -name \"*.spec.js\" -not -path \"./node_modules/*\")",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint-fix": "eslint --fix \"src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pesutak/node-red-contrib-xml-beautifier.git"
+  },
+  "keywords": [
+    "node-red",
+    "xml"
+  ],
+  "author": "Peter Sutak <psutak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pesutak/node-red-contrib-xml-beautifier/issues"
+  },
+  "homepage": "https://github.com/pesutak/node-red-contrib-xml-beautifier#README",
+  "node-red": {
+    "nodes": {
+      "xml-beautify": "src/nodes/xml-beautify.js"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "node-red": "^1.0.2",
+    "node-red-node-test-helper": "^0.2.3",
+    "should": "^13.2.1"
+  },
+  "dependencies": {
+    "xml-js": "^1.6.11"
+  }
+}
