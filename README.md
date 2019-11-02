@@ -3,6 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpesutak%2Fnode-red-contrib-xml-beautifier.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpesutak%2Fnode-red-contrib-xml-beautifier?ref=badge_shield)
 
+
 A simple node to beautify xml input string
 
 ## Installation
