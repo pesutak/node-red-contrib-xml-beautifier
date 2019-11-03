@@ -1,9 +1,14 @@
 <script type="text/javascript">
+    const positiveNum = function(blankAllowed){ 
+        return function(v) { 
+        return (blankAllowed && (v===''||v===undefined)) || (v !=='' && !isNaN(v) && Number(v) > 0);}};
+
     RED.nodes.registerType('xml-beautify',{
         category: 'function',
         color: '#ffaaaa',
         defaults: {
-            name: {value:""}
+            name: {value:""},
+            spaces: {value: 4, validate: positiveNum(true) }
         },
         inputs:1,
         outputs:1,
@@ -18,6 +23,10 @@
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-spaces"><i class="icon-tag"></i> Spaces</label>
+        <input type="text" id="node-input-spaces" placeholder="4">
     </div>
 </script>
 

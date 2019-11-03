@@ -3,11 +3,12 @@ const convert = require('xml-js');
 module.exports = function(RED) {
     function BeautifyXml(config) {
         RED.nodes.createNode(this,config);
+        this.spaces = config.spaces||4;
         var node = this;
 
-        const beauty = (xml) =>{
+        const beauty = (xml) => {
             var tmp = convert.xml2json(xml,{ compact:true });
-            var res = convert.json2xml(tmp,{ compact:true, spaces:4 });
+            var res = convert.json2xml(tmp,{ compact:true, spaces: Number(this.spaces) });
             return res;
         };
 
