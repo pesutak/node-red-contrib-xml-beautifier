@@ -4,8 +4,8 @@
   "description": "beautify xml output",
   "main": "index.js",
   "scripts": {
-    "test": "mocha \"test/**/*spec.js\"",
-    "coverage": "istanbul cover _mocha $(find ./lib -name \"*.spec.js\" -not -path \"./node_modules/*\")",
+    "test": "nyc mocha \"test/**/*spec.js\"",
+    "coverage": "nyc mocha \"test/**/*spec.js\"",
     "lint": "eslint \"src/**/*.js\"",
     "lint-fix": "eslint --fix \"src/**/*.js\""
   },
@@ -30,10 +30,10 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "node-red": "^1.0.2",
     "node-red-node-test-helper": "^0.2.3",
+    "nyc": "^14.1.1",
     "should": "^13.2.1"
   },
   "dependencies": {
