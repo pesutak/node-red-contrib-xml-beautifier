@@ -31,8 +31,8 @@
   "devDependencies": {
     "eslint": "^7.16.0",
     "mocha": "^6.2.3",
-    "node-red": "^2.0.0",
-    "node-red-node-test-helper": "^0.2.3",
+    "node-red": "^3.0.2",
+    "node-red-node-test-helper": "^0.3.0",
     "nyc": "^15.0.0",
     "should": "^13.2.1"
   },
